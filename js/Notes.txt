@@ -1,0 +1,48 @@
+Angular - Google
+----------
+1. AngularJS1x: Angular JS-> from 1.0 tp 1.7
+    -> MVC framework
+
+Problems
+--------
+1- complex to learn -> Pure JS code 
+2. Only MVC/MVVM/MV* design 
+3. too many dom manupulations
+4. Its not a component based
+
+
+2. Angular2X: Angular -> 2.0 to 7.0
+Advantages
+----------
+1- Its a COmponent based
+2- we can design SPA (Simple Page Applications)
+3. less dom manupulations
+4. very faster page rendering
+5. TypeScipt support (No need to know JS)
+6. Asynch code programming is very faster
+7. Modules and many libraries 
+
+
+Versions Of Angular
+Angular Versions                Router Module
+-> 2x                           1x
+-> 4x                            4x
+-> 5x                           5x
+-> 6x                           6x
+-> 7x                           7x
+-> 8x (in mid of May 2019)
+
+
+How Anguler Work
+--------------------
+
+-> Web pack is used to bundle js, ts, jped, css into a single file
+
+
+HTML
+css
+BOOTSTRAP
+JAVA SCRIPT
+TYPE SCRIPT
+WEB pack
+
