@@ -1,0 +1,13 @@
+Data Binding
+---------------
+    -> property Binding => []
+            Component ==> Template
+    -> event Binding    => ()
+            Template ==> Component
+    -> two way Binding  => [()]
+            Component <==> Template
+
+
+npm install bootstrap --save
+ng generate component greet
+

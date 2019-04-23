@@ -1,0 +1,71 @@
+<div class="container">
+
+  <div class="alert alert-info text-center mt-3">
+    <h1>Data Binding -v1</h1>
+  </div>
+
+  <div>
+    <img [src]="imageUrl" height="300" width="300">
+  </div>
+  <div>
+    <button class="btn btn-primary" [disabled]="submited">Click Here</button>
+  </div>
+
+<h1>Employee: {{emp | json}}</h1>
+
+<div class="row">
+  <div class="card">
+    <div class="card-header bg-success">
+      <h3>Employee Form</h3>
+    </div>
+    
+    <div class="card-body">
+        <div class="col-12">
+            <div class="form-group">
+                <label>Id</label>
+                <input class="form-control" type="text" name="empName" [(ngModel)]="emp.id" #en>
+              </div>
+              <div>
+                  <label>Name</label>
+                  <input  class="form-control" type="text" name="empName" [(ngModel)]="emp.name" #en>
+              </div>
+            
+              <div>
+                  <label>Salary</label>
+                  <input  class="form-control"  type="text" name="empName" [(ngModel)]="emp.salary" #en>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+<h1>Now: {{now | date}}</h1>
+<h1>Now: {{now | date:'d/M/y'}}</h1>
+<h1>Now: {{now | date:'shortDate'}}</h1>
+<h1>Now: {{now | date:'longDate'}}</h1>
+<h1>INR: {{1000 | currency:'INR'}}</h1>
+<h1>USD: {{1000 | currency:'USD'}}</h1>
+
+
+
+  <h1>Name: {{empName | uppercase}}</h1>
+  <h1>Name: {{empName | lowercase}}</h1>
+  <div>
+    <label>Employee Name</label>
+    <input type="text" name="empName" [(ngModel)]="empName" #en>
+  </div>
+<h1>EN: {{en.value}}</h1>
+  <div>
+    <select name="colName" #cn  (change)="setColor(colName)">
+      <option *ngFor="let colorName of colors"  >
+         {{colorName}}
+      </option>
+    </select>
+    <h1>Selected Color: {{cn.value}}</h1>
+  </div>
+  <div>
+    <h2 style.color="{{cn.value}}">Praveen</h2>
+  </div>
+
+</div>

@@ -1,0 +1,56 @@
+<div class="container">
+<div class="alert alert-info text-center mt-3">
+<h1>Data Binding in Angular</h1>
+</div>
+
+<div>
+<h2>Name: {{name}}</h2>
+<h2>Cities: {{cities}}</h2>
+<h2>EMP: {{emp | json}}</h2>
+<h2>ID: {{emp.id}}</h2>
+<h2>Name: {{emp.name}}</h2>
+<h2>Salary: {{emp.salary}}</h2>
+
+</div>
+<button class="btn btn-success btn-space" (click)="fun()">Show</button>
+<button class="btn btn-success btn-space" (click)="fun1()">Hide</button>
+<button class="btn btn-success btn-space" (click)="toggle()">Show / Hide</button>
+
+<div class="alert alert-primary" *ngIf="showData">
+<h2>Hello</h2>
+</div>
+
+
+<table class="table table-hover" *ngIf="employees && employees.length">
+    <tr class="bg-primary">
+        <th>ID</th>
+        <th>Name</th>
+        <th>Salary</th>
+    </tr>  
+
+    <tr *ngFor="let emp of employees">
+        <td>{{emp.id}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.salary}}</td>
+    </tr>
+  
+    
+  </table>
+  
+
+<div *ngFor="let cityName of cities" class="list-group-item bg-info">
+    {{cityName}}
+</div>
+
+<hr/>
+
+<div *ngFor="let cityName of cities" class="table table-dark">
+    <tr>
+        <td>{{cityName}}</td>
+
+    </tr>
+</div>
+
+
+
+</div>
