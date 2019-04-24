@@ -1,0 +1,27 @@
+<div class="container">
+
+  <div class="alert alert-info text-center">
+    <h1>Binding Demo APP</h1>
+  </div>
+
+  <h1 [style.color]="textColor">Property Binding</h1>
+
+  <div>
+    <label >Name</label>
+    <input type="text" name="empName" #en>
+  </div>
+
+  <h1>City: {{cityName}}</h1>
+  <div>
+    <label >City Name</label>
+    <input type="text" name="city" [(ngModel)]="cityName">
+  </div>
+
+
+
+  <button class="btn btn-primary" (click)="myFun(en.value)">Click Here</button>
+
+
+
+
+</div>
