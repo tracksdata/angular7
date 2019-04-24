@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="alert alert-info text-center mt-3">
+    <h1>APP Component</h1>
+    <button class="btn btn-primary btn-space" (click)="greet('Good Morning')">Good Morning</button>
+    <button class="btn btn-primary btn-space" (click)="greet('Good Afternoon')">Good Afternoon</button>
+    <button class="btn btn-primary btn-space" (click)="greet('Good Evening')">Good Evening</button>
+    <h2 *ngIf="childMsg">Message: {{childMsg}}</h2>
+</div>
+
+<div>
+  <app-greet [message]="greetMsg" (parentMsg)="f2($event)"></app-greet>
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+  

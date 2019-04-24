@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="alert alert-info text-center mt-3">
+    <h1>APP Component</h1>
+    <button class="btn btn-success" (click)="myFun('Good Morning')">Greet</button>
+  </div>
+
+  <div class="bg-warning text-center mt-4">
+    <app-greet message="Good Afternoon"></app-greet>
+    <app-greet [message]="greetMsg"></app-greet>
+
+
+  </div>
+
+
+
+  
