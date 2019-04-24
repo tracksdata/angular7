@@ -1,0 +1,19 @@
+<h1>Custom Pipe Demo</h1> <hr/>
+<h2>Name: {{name | uppercase}}</h2>
+
+<hr/>
+
+<h2> Good: Result: {{5 | power:3}}</h2>
+<h2>Bad: {{calculate(2,3)}}</h2>
+
+<hr/>
+
+<div>
+  <input type="text"  [(ngModel)]="searchText">
+  <li *ngFor="let city of cities | cityfilter:searchText">
+    {{city}}
+  </li>
+</div>
+
+
+
