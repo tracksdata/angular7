@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Product } from './product';
 
 @Injectable({
   providedIn: 'root'
@@ -7,8 +8,12 @@ export class ProductService {
 
   products=new Array();
 
-  addProduct(product){
+  prodForm=new Product();
+
+  addProduct(product:Product){
     this.products.push(product);
+    console.log(this.products);
+    
   }
 
   listProducts(){

@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { ProductService } from '../product.service';
+import { pseudoRandomBytes } from 'crypto';
+import { Product } from '../product';
 
 @Component({
   selector: 'app-list-products',
@@ -8,11 +10,29 @@ import { ProductService } from '../product.service';
 })
 export class ListProductsComponent implements OnInit {
 
-  products=[];
+  products:any;
   constructor(private ps:ProductService) { }
 
   ngOnInit() {
-    this.products=this.ps.listProducts();
+   this.products=this.ps.listProducts();
+  }
+
+  myObject={};
+
+  @Output()
+  parentData=new EventEmitter();
+
+
+  editData(product:Product){
+    this.myObject={
+      isReadOnly:true,
+      btnLable:'Update'
+    };
+    //this.ps.prodForm=product;
+    this.ps.prodForm=Object.assign({},product);
+    this.parentData.emit(this.myObject)
+
+
   }
 
 }

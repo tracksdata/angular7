@@ -1,4 +1,4 @@
-<table class="table table-hover">
+<table class="table table-hover" *ngIf="products.length">
     <tr>
       <th>ID</th>
       <th>NAME</th>
@@ -6,9 +6,10 @@
     </tr>
 
     <tr *ngFor="let product of products">
-      <td>{{product.id}}</td>
+      <td> <a (click)="editData(product)" type="button">{{product.id}}</a></td>
       <td>{{product.name}}</td>
       <td>{{product.price}}</td>
+      <td><button class="btn btn-danger">X</button></td>
 
     </tr>
   </table>

@@ -32,4 +32,13 @@ ProductService
 -> use this service classes to define global Data
 -> so that all other components can access from 
    this service class methods
-   
+
+
+NGFORM
+--------
+1. ng-touched
+2. ng-untouched
+3. ng.dirty
+4. ng-pristine
+5. ng.valid
+6. ng.invalid
