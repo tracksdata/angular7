@@ -11,3 +11,25 @@ Data Binding
 npm install bootstrap --save
 ng generate component greet
 
+
+Forms in Angular
+---------------------
+1. Template Driven
+2. Reactive Forms
+
+1. Template Driven
+----------------------
+
+
+
+
+
+Service classes
+-------------------
+
+ProductService
+
+-> use this service classes to define global Data
+-> so that all other components can access from 
+   this service class methods
+   
