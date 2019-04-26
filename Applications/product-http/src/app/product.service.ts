@@ -9,7 +9,10 @@ export class ProductService {
   addProduct(product){
     //this.products.push(product);
     console.log(JSON.stringify(product));
-    return this.http.post(product,this.url);
+    return this.http.post(this.url,product).subscribe((data=>{
+      console.log(('---- in method'));
+      
+    }))
       
   }
 
