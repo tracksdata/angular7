@@ -1,6 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { ProductService } from '../product.service';
-import { pseudoRandomBytes } from 'crypto';
 import { Product } from '../product';
 
 @Component({

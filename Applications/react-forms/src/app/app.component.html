@@ -1,0 +1,75 @@
+<div class="container">
+<div class="alert alert-info text-center mt-3">
+<h1>Reactive Forms Demo</h1>
+</div>
+
+<div class="row">
+
+  <div class="col-7">
+
+    <div class="card">
+
+      <div class="card-header">
+        Product Form
+      </div>
+
+      <div class="card-body">
+
+        <form [formGroup]="productForm" autocomplete="off" (ngSubmit)="handleForm()">
+        
+          <div class="form-group">
+            <label>Id</label>
+            <input type="text" name="id" formControlName="id" class="form-control" required>
+            <span *ngIf="fn.id.invalid && fn.id.touched">Id Required</span>
+          </div>
+          <div class="form-group">
+              <label>Name</label>
+              <input type="text" name="name" formControlName="name" class="form-control" required>
+              <span *ngIf="fn.name.invalid && fn.name.touched">Name Required</span>
+
+            </div>
+          <div class="form-group">
+              <label>Price</label>
+              <input type="text" name="price" formControlName="price" class="form-control" required>
+              <span *ngIf="fn.price.invalid && fn.price.touched">Price Required</span>
+
+            </div>
+            <div class="form-group">
+                <label>US Phone No (123) 123-1234</label>
+                <input type="text" name="phone" formControlName="phone" class="form-control" required>
+                <span *ngIf="fn.phone.invalid && fn.phone.touched">Phone No (123) 123-1234  fornat only</span>
+  
+              </div>
+
+            <div class="form-group">
+                <label>Reviews</label>
+                 <textarea name="review" formControlName="review" class="form-control" ></textarea>  
+                <span>
+                  {{errors['body']}}
+                </span>
+  
+            </div>
+
+          <div class="form-group text-center">
+            <button type="submit" class="btn btn-primary" [disabled]="productForm.invalid">Save</button>
+          </div>
+
+        </form>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="col-5">
+
+    <app-list-products></app-list-products>
+  </div>
+
+</div>
+
+
+
+</div>
