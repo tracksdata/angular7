@@ -1,0 +1,33 @@
+
+<div class="container">
+<div class="alert alert-info text-center mt-3">
+  <h1>Product APP</h1>
+</div>
+
+<div class="row">
+
+  <div  class="col-3">
+      <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['']">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['form']">Form</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"[routerLink]="['list']">Display</a>
+          </li>
+        
+        </ul>
+
+  </div>
+
+  <div class="col-9">
+    <router-outlet></router-outlet>
+    
+  </div>
+
+</div>
+
+
+</div>
